@@ -23,21 +23,14 @@
     <!-- ---------------- -->
   </head>
   <body>
-
     <!-- herşey bu rootta renderlenecek. bunun içi boş kalmalı -->
     <div id="root"></div>
 
     <script type="text/babel">
-
-
       const Link = ReactRouterDOM.Link,
         Route = ReactRouterDOM.Route;
 
-
-
       const App = (props) => (
-
-
         /* ilk div olan kısım dilersen tüm sayfalarda gözükebilecek ortak header kısmı */
 
         <ReactRouterDOM.HashRouter>
@@ -79,7 +72,7 @@
           <Link to="/dashboard">look to dashboard</Link>
         </div>
       );
-      
+
       const DashboardPage = (props) => (
         <div>
           <h1>DASHBOARD PAGE</h1>
@@ -88,7 +81,8 @@
         </div>
       );
 
-      ReactDOM.render(<App />, document.querySelector("#root"));
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(<App />);
     </script>
   </body>
 </html>
